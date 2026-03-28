@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+        <script>
+            function somar_v1(a, b) {
+                return a + b;
+            }
+            let somar_v2 = (a, b) => {
+                return a + b;
+            }
+            let somar_v3 = (a, b) => a = b;
+
+            function click_somar(opçao) {
+                let x;
+                let n1 = eval(document.getElementById("n1").value);
+                let n2 = eval(document.getElementById("n2").value);
+                document.getElementById("resp").innerHTML = "A opçcaoe é:" + opçao;
+                switch (opçao) {
+                    case 1:
+                        x = somar_v1(n1, n2);
+                        break;
+                    case 2:
+                        x = somar_v2(n1, n2);
+                        break;
+                    case 3:
+                        x = somar_v3(n1, n2);
+                        break;
+                }
+
+                document.getElementById("resp").innerHTML = "A soma resultante é:" + x;
+            }
+        </script>
+        <input type="number" id="n1" />
+        <input type="number" id="n2" />
+        <button onclick="click_soma(1)">Versao 1</button>
+        <button onclick="click_soma(2)">Versao 2</button>
+        <button onclick="click_soma(3)">Versao 3</button>
+        <div id="resp">A resposta aparece aqui</div>
+    </body>
+
+    </html>
+
+</body>
+</body>
+
+</html>
